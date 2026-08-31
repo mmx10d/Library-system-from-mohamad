@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <div class="form-back">
+
+        <form>
+
+            <h2 class="form-header"> Enter the book details:</h2>
+            
+            <div class="book-details">
+
+                <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+              </div>
+              <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" name="author" id="author">
+             </div>
+             <div class="form-group">
+                <label for="pages">Pages:</label>
+                <input type="number" name="pages" id="pages">
+             </div>
+             <div class="form-group">
+                <label for="rating">rating:</label>
+                <input type="text" name="rating" id="rating">
+             </div>             
+             
+            </div>
+            
+            <div class="checkbox">
+                <span class="chckbox-header">The book state:</span>
+
+                <div class="boxes">
+                  <div class="box">
+                    <label for="read">read</label>
+                    <input type="checkbox" name="read" id="read">
+                  </div>
+                  <div class="box">
+                    <label for="unread">not read</label>
+                    <input type="checkbox" name="unread" id="unread">
+                  </div>
+                </div>
+
+           </div>
+
+           <div class="form-group">
+                <input type="search" name="search" placeholder="search..." id="search">
+           </div>
+
+            <div class="btn-container">
+                <button type="button" class="btn">Add Book</button>
+            </div>
+
+        </form>
+
+
+        <!-- <table>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Rating</th>
+                <th>Book state</th>
+            </tr>
+            <tr class="tableBody">
+                
+            </tr>
+        </table> -->
+    </div>
+
+</body>
+</html>
