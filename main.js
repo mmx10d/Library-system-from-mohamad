@@ -30,6 +30,7 @@ form.addEventListener('submit', (e) => {
   let book=new Book(bookName, bookAuthor, bookPages,bookRead, bookRating);
    books.push(book);
    display(books);
+   clear();
 })
 
 
@@ -52,24 +53,36 @@ function Book(name,author,pages,read,rating){
 }
 
 
+
 function display(books){
     let data='';
 
     for(let i=0; i<books.length; i++){
         data+=`
-       <td>${i}<td>
+     <tr>
+        <td>${i}<td>
        <td>${books[i].name}<td>
        <td>${books[i].author}<td>
        <td>${books[i].pages}<td>
        <td>${books[i].rating}<td>
        <td>.<td>
        <td>${books[i].read}<td>
+     </tr>
      `
     }
 
     table.innerHTML=data;
 }
 
+
+
+function clear(){
+    bookName='';
+    bookAuthor='';
+    bookRating='';
+    bookRead='';
+    bookPages='';
+}
 
 
 
