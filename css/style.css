@@ -149,6 +149,10 @@ input[type="search"]{
     min-width:380px;
 }
 
+.table-content thead{
+    width:100%;
+}
+
 .table-content thead tr{
     background-color:#9b59b6;
     font-weight:bold;
