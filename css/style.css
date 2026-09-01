@@ -80,9 +80,11 @@ label{
     margin-right:2px;
 }
 
-input[type="checkbox"]{
+input[type="radio"]{
     min-height: 24px;
     min-width: 24px;
+    max-width: 55px;
+    max-height: 55px;
 }
 
 input{
