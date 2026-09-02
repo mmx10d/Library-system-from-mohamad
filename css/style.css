@@ -71,9 +71,7 @@ label{
     width:25%;
 }
 
-.box label[for="read"]{
-    margin-right:-5px;
-}
+/*       */
 
 .box label{
     white-space:nowrap;
@@ -142,6 +140,11 @@ input[type="search"]{
     padding:40px 20px 50px 20px;
 }
 
+table{
+    width:100%;
+    table-layout: fixed;
+}
+
 .table-content{
     width:100%;
     border-collapse:collapse;
@@ -149,9 +152,9 @@ input[type="search"]{
     min-width:380px;
 }
 
-/* .table-content thead{
+.table-content thead{
     width:100%;
-} */
+}
 
 .table-content thead tr{
     background-color:#9b59b6;
@@ -166,9 +169,13 @@ th{
     margin-bottom:20px;
 }
 
+td{
+    font-size:1.1rem;
+}
+
 .table-content th, 
 .table-content td{
-    padding:10px 12px;
+    padding:8px 10px;
     
 }
 

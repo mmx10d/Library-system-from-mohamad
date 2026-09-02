@@ -66,7 +66,6 @@ function displayBook(){
        <td>${books[i].author}</td>
        <td>${books[i].pages}</td>
        <td>${books[i].rating}</td>
-       <td>.<td>
        <td>${books[i].read}</td>
        <td> <button class="delete" type="button" onclick="deleteBook(${i})">Delete</button></td>
      </tr>
