@@ -179,3 +179,15 @@ th{
 .table-content tbody tr:nth-of-type(even){
     background-color:#f3f3f3;
 }
+
+
+.delete{
+    background-color:rgb(211, 3, 3);
+    color:#fff;
+    padding:7px 12px;
+    font-size:1.2rem;
+
+    border:none;
+    border-radius:10px;
+
+}

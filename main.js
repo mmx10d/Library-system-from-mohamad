@@ -9,12 +9,12 @@ let table= document.querySelector('.tableBody');
 let bookRead;
 
 
-// if(localStorage.getItem("books") !=null){
-//     books= JSON.parse(localStorage.getItem("books"))
-// }else{
-// }
 
 let books=[];
+
+if(localStorage.getItem("books")!=null){
+    books= JSON.parse(localStorage.getItem("books"))
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -29,12 +29,13 @@ form.addEventListener('submit', (e) => {
 
   let book=new Book(bookName, bookAuthor, bookPages,bookRead, bookRating);
    books.push(book);
-   display(books);
+   localStorage.setItem('books', JSON.stringify(books));
+
+   displayBook();
    clear();
 })
 
 
-// localStorage.setItem('books', JSON.stringify(books));
 
 
 
@@ -54,19 +55,20 @@ function Book(name,author,pages,read,rating){
 
 
 
-function display(books){
+function displayBook(){
     let data='';
 
     for(let i=0; i<books.length; i++){
         data+=`
      <tr>
-        <td>${i}<td>
-       <td>${books[i].name}<td>
-       <td>${books[i].author}<td>
-       <td>${books[i].pages}<td>
-       <td>${books[i].rating}<td>
+        <td>${i}</td>
+       <td>${books[i].name}</td>
+       <td>${books[i].author}</td>
+       <td>${books[i].pages}</td>
+       <td>${books[i].rating}</td>
        <td>.<td>
-       <td>${books[i].read}<td>
+       <td>${books[i].read}</td>
+       <td> <button class="delete" type="button" onclick="deleteBook(${i})">Delete</button></td>
      </tr>
      `
     }
@@ -77,14 +79,19 @@ function display(books){
 
 
 function clear(){
-    bookName='';
-    bookAuthor='';
-    bookRating='';
-    bookRead='';
-    bookPages='';
+    bookName.value='';
+    bookAuthor.value='';
+    bookRating.value='';
+    bookRead.value='';
+    bookPages.value='';
 }
 
 
+function deleteBook(index){
+    books.splice(index, 1);
 
+    localStorage.setItem('books',JSON.stringify(books));
+    displayBook();
+}
 
 
