@@ -6,6 +6,7 @@ let bookAuthor= document.querySelector('#author');
 let bookPages= document.querySelector('#pages');
 let bookRating= document.querySelector('#rating');
 let table= document.querySelector('.tableBody');
+let search= document.querySelector('#search');
 let bookRead;
 
 
@@ -108,3 +109,28 @@ function changeState(index){
     displayBook();
 }
 
+
+
+search.addEventListener('keyup', (e) => {
+    let data='';
+
+    for(let i=0; i<books.length; i++){
+        
+        if(books[i].name.toLowerCase().includes(e.target.value.toLowerCase())){
+            data+=`
+          <tr>
+            <td>${i}</td>
+            <td>${books[i].name}</td>
+            <td>${books[i].author}</td>
+            <td>${books[i].pages}</td>
+            <td>${books[i].rating}</td>
+            <td><button type="button" class="checkRead" onclick="changeState(${i})">${books[i].read}</button></td>
+             <td> <button class="delete" type="button" onclick="deleteBook(${i})">Delete</button></td>
+          </tr>
+            `
+        }
+    }
+
+
+    table.innerHTML=data;
+} )
