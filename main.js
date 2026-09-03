@@ -55,25 +55,26 @@ function Book(name,author,pages,read,rating){
 
 
 
-function displayBook(){
-    let data='';
+    function displayBook(){
+        let data='';
+        
+        for(let i=0; i<books.length; i++){
 
-    for(let i=0; i<books.length; i++){
-        data+=`
-     <tr>
-        <td>${i}</td>
-       <td>${books[i].name}</td>
-       <td>${books[i].author}</td>
-       <td>${books[i].pages}</td>
-       <td>${books[i].rating}</td>
-       <td>${books[i].read}</td>
-       <td> <button class="delete" type="button" onclick="deleteBook(${i})">Delete</button></td>
-     </tr>
-     `
+            data+=`
+        <tr>
+            <td>${i}</td>
+        <td>${books[i].name}</td>
+        <td>${books[i].author}</td>
+        <td>${books[i].pages}</td>
+        <td>${books[i].rating}</td>
+        <td><button type="button" class="checkRead" onclick="changeState(${i})">${books[i].read}</button></td>
+        <td> <button class="delete" type="button" onclick="deleteBook(${i})">Delete</button></td>
+        </tr>
+        `
+        }
+
+        table.innerHTML=data;
     }
-
-    table.innerHTML=data;
-}
 
 
 
@@ -93,4 +94,17 @@ function deleteBook(index){
     displayBook();
 }
 
+
+// let btnRead= document.querySelector('.checkRead');
+function changeState(index){
+    
+    if(books[index].read=="read"){
+        books[index].read="unread";
+    }else{
+        books[index].read="read";
+    }
+
+    localStorage.setItem('books',JSON.stringify(books));
+    displayBook();
+}
 

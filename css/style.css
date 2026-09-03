@@ -198,3 +198,16 @@ td{
     border-radius:10px;
 
 }
+
+
+.checkRead{
+    background-color: transparent;
+    color:#9b59b6;
+
+    border:none;
+    border-bottom:3px solid #9b59b6;
+
+    font-weight: 500;
+    font-size:1.14rem;
+}
+
