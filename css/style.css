@@ -2,8 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+::selection {
+  background-color: #71b7e6;
+  color: #9b59b6;
+  text-shadow: 0 0 1px white;
+}
 .background {
   display: flex;
   flex-direction: column;
@@ -223,6 +228,10 @@ td {
 .btn:hover,
 .delete:hover{
   box-shadow: 0 0 5px black;
+}
+
+label {
+  letter-spacing: 1px;
 }
 
 /*//// UI Imporve //////*/
