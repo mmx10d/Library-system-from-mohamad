@@ -211,3 +211,15 @@ td{
     font-size:1.14rem;
 }
 
+
+
+input::selection,
+label::selection, 
+div::selection, 
+span::selection, 
+table::selection,
+ th::selection,
+ td::selection{
+    background-color: #71b7e6;
+    color:#fff;
+}

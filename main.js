@@ -15,6 +15,7 @@ let books=[];
 
 if(localStorage.getItem("books")!=null){
     books= JSON.parse(localStorage.getItem("books"))
+    displayBook();
 }
 
 form.addEventListener('submit', (e) => {
