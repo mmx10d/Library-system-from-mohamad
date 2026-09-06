@@ -14,6 +14,8 @@ let bookRead;
 let books = [];
 
 
+
+
 //to make the code clean
 onload = () => {
   if (localStorage.getItem("books")) {
@@ -22,6 +24,7 @@ onload = () => {
   //this'll fix not update when reload
   displayBook();
 }
+
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
